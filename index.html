@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartina Bago</title>
+    <title>Kartina Bago - Portfolio Profesional</title>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome untuk Ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary-green: #10b981; /* Hijau Emerald */
-            --dark-green: #065f46;
-            --bg-gray: #f4f4f5; /* Latar Abu-abu Lembut */
+            /* Palet Warna Lebih Matang & Profesional */
+            --primary-emerald: #059669; /* Hijau Emerald Utama */
+            --dark-emerald: #064e3b; /* Hijau Gelap untuk Teks/Aksen */
+            --accent-gold: #b45309; /* Emas Lembut untuk Aksen Menarik */
+            --bg-light: #f9fafb; /* Latar Belakang Sangat Terang */
+            --bg-neutral: #f3f4f6; /* Latar Belakang Netral Sekunder */
             --white: #ffffff;
-            --text-dark: #1f2937;
-            --text-muted: #6b7280;
-            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --transition: all 0.3s ease;
+            --text-main: #1f2937; /* Hitam Keabuan untuk Teks Utama */
+            --text-subtle: #4b5563; /* Abu-abu untuk Deskripsi */
+            --text-muted: #9ca3af; /* Abu-abu Muda untuk Keterangan */
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * {
@@ -29,9 +31,12 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-gray);
-            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif; /* Font Utama Bersih & Modern */
+            background-color: var(--bg-light);
+            /* Pola latar belakang halus untuk kedalaman */
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 10px 10px;
+            color: var(--text-main);
             line-height: 1.6;
             scroll-behavior: smooth;
         }
@@ -42,16 +47,17 @@
             padding: 0 2rem;
         }
 
-        /* Navigasi */
+        /* Navigasi - Lebih Bersih & Elegan */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #e5e7eb;
+            transition: var(--transition-smooth);
         }
 
         .nav-content {
@@ -61,32 +67,49 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: 'Lora', serif; /* Font Serif untuk Kesan Elegan */
+            font-size: 1.6rem;
             font-weight: 700;
-            color: var(--dark-green);
+            color: var(--dark-emerald);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-main);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: var(--transition);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-emerald);
+            transition: var(--transition-smooth);
         }
 
         .nav-links a:hover {
-            color: var(--primary-green);
+            color: var(--primary-emerald);
         }
 
-        /* Hero Section */
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section - Lebih Menarik dengan Gradien Halus */
         .hero {
             height: 100vh;
             display: flex;
@@ -94,229 +117,412 @@
             justify-content: center;
             text-align: center;
             padding-top: 80px;
+            /* Gradien lembut untuk latar belakang Hero */
+            background: radial-gradient(circle at center, #ffffff 0%, #f3f4f6 100%);
         }
 
         .hero-badge {
             display: inline-block;
-            background-color: rgba(16, 185, 129, 0.1);
-            color: var(--dark-green);
-            padding: 0.5rem 1rem;
+            background-color: rgba(5, 150, 137, 0.1);
+            color: var(--primary-emerald);
+            padding: 0.6rem 1.2rem;
             border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(5, 150, 137, 0.2);
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
+            font-family: 'Lora', serif;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Menambahkan aksen warna pada nama */
+        .hero h1 span {
+            color: var(--primary-emerald);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--text-subtle);
+            margin-bottom: 3rem;
+            max-width: 650px;
+            font-weight: 300;
         }
 
         .hero-actions {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
         }
 
-        /* Buttons */
+        /* Buttons - Lebih Matang & Responsif */
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.8rem;
-            border-radius: 8px;
+            gap: 0.75rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            transition: var(--transition);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
             cursor: pointer;
             border: none;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background-color: var(--primary-green);
+            background-color: var(--primary-emerald);
             color: white;
+            box-shadow: 0 4px 6px rgba(5, 150, 137, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: var(--dark-green);
-            transform: translateY(-2px);
+            background-color: var(--dark-emerald);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 10px rgba(5, 150, 137, 0.3);
         }
 
         .btn-outline {
             background-color: white;
-            color: var(--primary-green);
-            border: 2px solid var(--primary-green);
+            color: var(--primary-emerald);
+            border: 2px solid var(--primary-emerald);
         }
 
         .btn-outline:hover {
-            background-color: var(--primary-green);
+            background-color: var(--primary-emerald);
             color: white;
+            transform: translateY(-3px);
         }
 
-        /* Section Styling */
+        /* Section Styling - Lebih Konsisten */
         section {
-            padding: 100px 0;
+            padding: 120px 0;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-family: 'Lora', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* Menambahkan aksen warna pada judul section */
+        .section-header h2 span {
+            color: var(--accent-gold);
         }
 
         .underline {
-            width: 60px;
+            width: 80px;
             height: 4px;
-            background-color: var(--primary-green);
+            background: linear-gradient(90deg, var(--primary-emerald) 0%, var(--accent-gold) 100%);
             margin: 0 auto;
             border-radius: 2px;
         }
 
-        /* About Section */
+        /* About Section - Penataan Lebih Bersih */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 5rem;
+            align-items: start;
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             font-size: 1.1rem;
-            color: var(--text-muted);
+            color: var(--text-subtle);
+            font-weight: 300;
+        }
+        
+        .about-text p strong {
+            color: var(--dark-emerald);
+            font-weight: 600;
         }
 
         .about-info {
             background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
+            padding: 3rem;
+            border-radius: 24px;
             box-shadow: var(--card-shadow);
+            border: 1px solid #f3f4f6;
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+            font-weight: 500;
         }
 
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Ikon Info Lebih Berwarna & Berkarakter */
         .info-item i {
-            color: var(--primary-green);
-            font-size: 1.2rem;
-            width: 25px;
+            color: white;
+            background-color: var(--primary-emerald);
+            font-size: 1rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(5, 150, 137, 0.2);
+        }
+        
+        .info-item.hobby i {
+            background-color: var(--accent-gold);
+            box-shadow: 0 2px 4px rgba(180, 83, 9, 0.2);
         }
 
-        /* Skills */
+        /* Skills - Lebih Modern & Visual */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .skill-card {
             background: white;
-            padding: 3rem 2rem;
-            border-radius: 20px;
+            padding: 4rem 2.5rem;
+            border-radius: 24px;
             text-align: center;
-            transition: var(--transition);
+            transition: var(--transition-smooth);
             box-shadow: var(--card-shadow);
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-emerald), var(--accent-gold));
+            transform: scaleX(0);
+            transition: var(--transition-smooth);
         }
 
         .skill-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-card:hover::before {
+            transform: scaleX(1);
         }
 
+        /* Ikon Skill Lebih Berwarna & Menarik */
         .skill-card i {
-            font-size: 3rem;
-            color: var(--primary-green);
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            color: var(--primary-emerald);
+            margin-bottom: 2rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .skill-card:hover i {
+            color: var(--accent-gold);
+            transform: rotate(-10deg) scale(1.1);
+        }
+        
+        .skill-card h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
         }
 
-        /* Projects */
+        .skill-card p {
+            color: var(--text-subtle);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* Projects - Lebih Visual & Deskriptif */
         .project-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--card-shadow);
+            border: 1px solid #f3f4f6;
+            transition: var(--transition-smooth);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         .project-img {
-            height: 200px;
-            background-color: #e5e7eb;
+            height: 220px;
+            background-color: var(--bg-neutral);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #9ca3af;
+            color: var(--text-muted);
+            position: relative;
+        }
+        
+        .project-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.05));
+        }
+
+        .project-img i {
+            font-size: 4rem;
+            color: var(--primary-emerald);
+            opacity: 0.7;
+            transition: var(--transition-smooth);
+        }
+        
+        .project-card:hover .project-img i {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         .project-content {
-            padding: 2rem;
+            padding: 2.5rem;
+        }
+        
+        .project-content h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+        
+        .project-content p {
+            color: var(--text-subtle);
+            font-size: 0.95rem;
+            font-weight: 300;
         }
 
-        /* Gallery */
+        /* Gallery - Penataan Lebih Dinamis */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
         }
 
         .gallery-item {
             width: 100%;
-            height: 300px;
+            height: 320px;
             object-fit: cover;
-            border-radius: 15px;
-            transition: var(--transition);
+            border-radius: 20px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 4px solid white;
         }
 
         .gallery-item:hover {
-            transform: scale(1.03);
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+            border-color: var(--primary-emerald);
         }
 
-        /* Footer */
+        /* Footer - Lebih Profesional & Rapi */
         footer {
             background: white;
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
             border-top: 1px solid #e5e7eb;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--primary-emerald));
+        }
+
+        footer .logo {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            display: inline-block;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .social-links a {
-            color: var(--text-muted);
-            font-size: 1.5rem;
-            transition: var(--transition);
+            color: var(--text-subtle);
+            font-size: 1.6rem;
+            transition: var(--transition-smooth);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background-color: var(--bg-neutral);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .social-links a:hover {
-            color: var(--primary-green);
+            color: white;
+            background-color: var(--primary-emerald);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 5px 10px rgba(5, 150, 137, 0.3);
+        }
+        
+        .social-links a.facebook:hover { background-color: #1877F2; box-shadow: 0 5px 10px rgba(24, 119, 242, 0.3); }
+        .social-links a.instagram:hover { background-color: #E4405F; box-shadow: 0 5px 10px rgba(228, 64, 95, 0.3); }
+        .social-links a.github:hover { background-color: #333; box-shadow: 0 5px 10px rgba(51, 51, 51, 0.3); }
+        .social-links a.linkedin:hover { background-color: #0077B5; box-shadow: 0 5px 10px rgba(0, 119, 181, 0.3); }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
         }
 
-        /* Mobile */
+        /* Mobile Optimization - Lebih Responsif */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .about-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 1.5rem; }
+            .nav-links { display: none; } /* Perlu Menu Burger untuk Mobile sesungguhnya */
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.1rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .section-header h2 { font-size: 2.2rem; }
+            section { padding: 80px 0; }
         }
     </style>
 </head>
@@ -324,7 +530,7 @@
 
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="gambar1.jpg" class="logo">Kartina Bago</a>
+            <a href="#" class="logo">Kartina Bago</a>
             <ul class="nav-links">
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#skills">Keahlian</a></li>
@@ -338,13 +544,12 @@
     <header class="hero">
         <div class="container">
             <span class="hero-badge">Mahasiswa Sistem Informasi</span>
-            <h1>Kartina Bago</h1>
-            <p>Saya adalah mahasiswi di Universitas Nias Raya yang bercita-cita menjadi Web Developer dengan fokus pada desain yang bersih dan fungsional.</p>
+            <h1><span>Kartina</span> Bago</h1>
+            <p>Saya adalah mahasiswi di <strong>Universitas Nias Raya</strong> yang bercita-cita menjadi <strong>Web Developer</strong> dengan fokus pada desain yang bersih, fungsional, dan berpusat pada pengguna.</p>
             <div class="hero-actions">
-                <a href="#about" class="btn btn-primary">Kenali Saya <i class="fas fa-user"></i></a>
-                <!-- Link Download Resume -->
+                <a href="#about" class="btn btn-primary">Kenali Saya <i class="fas fa-arrow-right"></i></a>
                 <a href="URL_RESUME_ANDA_DISINI.pdf" download class="btn btn-outline">
-                    <i class="fas fa-file-download"></i> Download Resume
+                    <i class="fas fa-cloud-download-alt"></i> Download Resume
                 </a>
             </div>
         </div>
@@ -353,46 +558,46 @@
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2>Tentang Saya</h2>
+                <h2>Tentang <span>Saya</span></h2>
                 <div class="underline"></div>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Halo! Saya Kartina Bago, saat ini sedang menempuh pendidikan Semester 3 di Universitas Nias Raya (Uniraya).</p>
-                    <p>Saya sangat menyukai proses pembuatan situs web dari awal. Ketertarikan saya pada <i>front-end development</i> bermula dari keinginan untuk membuat antarmuka yang tidak hanya cantik tetapi juga mudah digunakan.</p>
-                    <p>Di luar jam kuliah, saya memiliki hobi menyanyi yang membantu saya tetap kreatif dan rileks di sela-sela kegiatan ngoding.</p>
+                    <p>Halo! Saya <strong>Kartina Bago</strong>, saat ini sedang menempuh pendidikan Semester 3 di <strong>Universitas Nias Raya (Uniraya)</strong>.</p>
+                    <p>Saya sangat menyukai proses pembuatan situs web dari awal. Ketertarikan saya pada <strong>front-end development</strong> bermula dari keinginan untuk membuat antarmuka yang tidak hanya cantik tetapi juga mudah digunakan dan inklusif.</p>
+                    <p>Di luar jam kuliah, saya memiliki hobi menyanyi yang membantu saya tetap kreatif, rileks, dan menemukan inspirasi baru di sela-sela kegiatan ngoding.</p>
                 </div>
                 <div class="about-info">
                     <div class="info-item"><i class="fas fa-university"></i> Universitas Nias Raya</div>
                     <div class="info-item"><i class="fas fa-graduation-cap"></i> Sistem Informasi</div>
-                    <div class="info-item"><i class="fas fa-laptop-code"></i> Fokus: Web Development</div>
-                    <div class="info-item"><i class="fas fa-music"></i> Hobi: Menyanyi</div>
+                    <div class="info-item"><i class="fas fa-code"></i> Fokus: Web Development</div>
+                    <div class="info-item hobby"><i class="fas fa-microphone-alt"></i> Hobi: Menyanyi</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" style="background-color: #fff;">
+    <section id="skills" style="background-color: var(--white); background-image: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
         <div class="container">
             <div class="section-header">
-                <h2>Keahlian & Visi</h2>
+                <h2>Keahlian & <span>Visi</span></h2>
                 <div class="underline"></div>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fab fa-html5"></i>
                     <h3>HTML & CSS</h3>
-                    <p>Membangun struktur web yang kokoh dan desain responsif.</p>
+                    <p>Membangun struktur web yang kokoh, semantik, dan desain responsif yang adaptif.</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-terminal"></i>
+                    <i class="fas fa-laptop-code"></i>
                     <h3>Ngoding</h3>
-                    <p>Berlatih logika pemrograman untuk solusi digital.</p>
+                    <p>Berlatih logika pemrograman untuk menciptakan solusi digital yang efisien dan inovatif.</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-lightbulb"></i>
+                    <i class="fas fa-seedling"></i>
                     <h3>Visi Digital</h3>
-                    <p>Menciptakan solusi yang estetik dan bermanfaat bagi pengguna.</p>
+                    <p>Menciptakan solusi yang estetik, bermanfaat, dan memberikan nilai tambah bagi pengguna.</p>
                 </div>
             </div>
         </div>
@@ -401,53 +606,53 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>Proyek Saya</h2>
+                <h2>Proyek <span>Saya</span></h2>
                 <div class="underline"></div>
             </div>
             <div class="skills-grid">
                 <div class="project-card">
-                    <div class="project-img"><i class="fas fa-window-maximize fa-4x"></i></div>
+                    <div class="project-img"><i class="fas fa-desktop"></i></div>
                     <div class="project-content">
                         <h3>Landing Page Personal</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Website portofolio untuk mengenalkan identitas profesional.</p>
+                        <p>Website portofolio modern untuk mengenalkan identitas profesional dan karya saya.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img"><i class="fas fa-database fa-4x"></i></div>
+                    <div class="project-img"><i class="fas fa-server"></i></div>
                     <div class="project-content">
                         <h3>Konsep SI Kampus</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Ide digitalisasi manajemen data mahasiswa di Uniraya.</p>
+                        <p>Ide digitalisasi manajemen data mahasiswa di Uniraya untuk efisiensi administrasi.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" style="background-color: #fff;">
+    <section id="gallery" style="background-color: var(--white);">
         <div class="container">
             <div class="section-header">
-                <h2>Galeri</h2>
+                <h2><span>Galeri</span></h2>
                 <div class="underline"></div>
             </div>
             <div class="gallery-grid">
-                <img src="gambar1.jpg" alt="Kartina 1" class="gallery-item">
-                <img src="gambar2.jpg" alt="Kartina 2" class="gallery-item">
-                <img src="gambar3.jpg" alt="Kartina 3" class="gallery-item">
-                <img src="gambar4.jpg" alt="Kartina 4" class="gallery-item">
+                <img src="gambar1.jpg" alt="Kartina 1 - Dokumentasi Universitas Nias Raya" class="gallery-item">
+                <img src="gambar2.jpg" alt="Kartina 2 - Kegiatan Mahasiswa Sistem Informasi" class="gallery-item">
+                <img src="gambar3.jpg" alt="Kartina 3 - Presentasi Proyek Web Development" class="gallery-item">
+                <img src="gambar4.jpg" alt="Kartina 4 - Hoby Menyanyi dan Kreativitas" class="gallery-item">
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <h2 class="logo">Kartina Bago</h2>
+            <a href="#" class="logo">Kartina Bago</a>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="github"><i class="fab fa-github"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2025 Kartina Bago. Mahasiswa Sistem Informasi Uniraya.</p>
+            <p>&copy; 2025 Kartina Bago. Mahasiswa Sistem Informasi Universitas Nias Raya.</p>
         </div>
     </footer>
 
